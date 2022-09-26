@@ -1,0 +1,38 @@
+
+//pass by value vs pass by reference
+
+function passFn(value,valueBool){
+    console.log(value,valueBool)
+    value=5;
+    valueBool=false;
+    console.log(value,valueBool)
+}
+
+
+//  vs pass by reference
+
+function passRefFn(obj){
+    console.log(obj)
+    obj.model='9';
+    obj={
+        year:'2022'
+    }
+    console.log(obj)
+}
+
+let value=4
+let valueBool=true
+
+let obj={
+    mobile:'Oneplus',
+    model:'9 pro'
+}
+
+// pass by value e.g. Primitive types. Number, string, bool
+passFn(value,valueBool)
+console.log(value,valueBool)
+
+// pass by ref. e.g. Object 
+
+passRefFn(obj)
+console.log(obj)
